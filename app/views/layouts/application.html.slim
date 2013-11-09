@@ -10,7 +10,7 @@ html
       .navbar.navbar-default
         .navbar-header
           .navbar-brand
-            = link_to 'codesy.io', root_path
+            = link_to image_tag('/assets/codesy_logo_sm.png'), root_path
         .navbar-collapse.collapse
           ul class="nav navbar-nav"
             - if user_signed_in?
@@ -41,3 +41,8 @@ html
           .alert.alert-danger
             = flash[:alert]
         == yield
+
+      .jumbotron
+        a.btn.btn-lg.btn-success
+          img src='assets/GitHub-Mark-64px.png'
+          span Sign in with GitHub
